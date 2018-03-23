@@ -1,0 +1,14 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  background-image: url("https://apod.nasa.gov/apod/image/1803/HH-HST-ESO-Sgendler1024.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+}
