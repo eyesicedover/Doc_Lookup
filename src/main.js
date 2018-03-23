@@ -9,10 +9,12 @@ $(document).ready(function() {
     $("ul").empty();
     let search = $("#search").val();
     let term = $("input#term").val();
-    if (search == "name") {
+    if (search == "Name") {
       apiCallDocs(term);
+      $("#message").text("Returning first 20 doctors with offices within 25 mi of Portland, OR that match the name: " + term);
     } else {
       apiCallSearch(term);
+      $("#message").text("Returning first 20 doctors with offices within 25 mi of Portland, OR that can treat the symptom: " + term);
     }
     $("#answer").show(1000);
   });
