@@ -12,3 +12,9 @@ body {
   background-position: center;
   min-height: 100%;
 }
+
+a
+{
+target-name:new;
+target-new:tab;
+}

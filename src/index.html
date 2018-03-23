@@ -10,14 +10,26 @@
     <div class="jumbotron text-center">
       <h1>Better Doctor Lookup</h1>
     </div>
-    <div class="container text-center">
-      <div class="error">
+    <div class="container">
+      <div class="well text-center">
+        <p>Choose to search for a doctor by name or by your symptoms.</p>
+        <form class="form-group">
+          <select id="search">
+            <option>Name</option>
+            <option>Symptoms</option>
+          </select>
+          <input type="text" id="term" required>
+          <button type="submit" class="btn btn-danger">Search</button>
+        </form>
       </div>
-        <div class="well">
-          <ul class="results">
-          </ul>
+      <div class="well" id="answer">
+        <div id="error">
         </div>
-
+        <div id="message">
+        </div>
+        <ul id="results">
+        </ul>
+      </div>
     </div>
   </body>
 </html>
