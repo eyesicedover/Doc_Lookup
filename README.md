@@ -1,45 +1,10 @@
-# template
-#### JavaScript, JQuery, and Node based html project, 3-21-18  
+# Doctor Lookup
+#### JavaScript, JQuery, and Node based html project, 3-23-18  
 
 #### _By Stephanie Faber_  
 
 ## Description
-_Description here_  
-
-## Specifications
-
-1. User enters their birth date into the page.
-* Example input: User enters 12/12/1992
-* Example output: The value of that date is stored
-
-2. The input date is converted into seconds.
-* Example input: date of 12/12/1992 stored in js datetime format, date of today
-* Example output: use getTime() to return milliseconds, divide by 1000 to return seconds.
-
-3. Take seconds of user input and todays date and subtract them to determine age in seconds.
-* Example input: todaysDateInSeconds - usersDateInSeconds
-* Example output: usersAgeInSeconds
-
-4. Convert seconds to years. There are roughly 31,536,000 seconds in a year on Earth.
-* Example input: usersAgeInSeconds/31536000
-* Example output: usersAgeInYearsEarth
-
-5. Convert age in years (25.27 in this example) on Earth to years on another planet, like Mars.
-* Example input: usersAgeInYearsEarth/1.88 (25.27/1.88)
-* Example output: You are 13.44 years old on Mars
-
-6. User enters the age of their life expectancy on Earth. Convert it to the age on another planet, for example Mars.
-* Example input: My age expectancy is 83 years.
-* Example output: That would be 43.7 years on Mars.
-
-7. Determine if difference between users age and age of life expectancy. Return years left on that planet, for example Mars.
-* Example input: Your age on Mars is 13.44 years, and you expect to live until you are 43.7 Martian years old.
-* Example output: You have 30.26 Martian years left.
-
-8. Should user's age exceed the given life expectancy, return the number of years they have exceeded that life expectancy.
-* Example input: Your age on Mars is 45.89 years, and you expect to live until you are 43.7 Martian years old.
-* Example output: You have lived 2.19 Martian years past your expectancy date! Congratulations!
-
+_A website using the Better Doctor API. A user can enter into a field their choice fo either a name or a symptom and search for doctors that match the query from the Better Doctor database._  
 
 ## Setup/Installation Requirements
 
@@ -48,6 +13,10 @@ _Description here_
 * _Download and install Node_
 
 * _Open command prompt (or your preferred command line shell), navigate to project directory, and enter >npm install_
+
+* _Visit the Better Doctor website (https://developer.betterdoctor.com/), sign up, and acquire your own api key_
+
+* _Create a root level file in the project directory called .env with the code >exports.apiKey=[YOUR API KEY HERE]. Enter your api key from the Better Doctor website in the area marked for it, without the brackets._
 
 * _In console enter >npm build_
 
@@ -61,7 +30,7 @@ _Description here_
 
 * _When ready to quit, close the Chrome window and hold control+c to terminate the program in console_
 
-Github Repository Link ()
+Github Repository Link (https://github.com/eyesicedover/Doc_Lookup.git)
 
 ## Support and contact details
 
@@ -77,6 +46,7 @@ _Please email me directly at eyesicedover@gmail.com_
 * Jasmine
 * Karma
 * Lint
+* Better Doctor API
 
 ### License
 
