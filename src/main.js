@@ -14,5 +14,6 @@ $(document).ready(function() {
     } else {
       apiCallSearch(term);
     }
+    $("#answer").show(1000);
   });
 });

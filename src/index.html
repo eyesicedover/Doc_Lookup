@@ -3,6 +3,7 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Source+Sans+Pro" rel="stylesheet">
     <meta charset="utf-8">
     <title></title>
   </head>
@@ -12,14 +13,22 @@
     </div>
     <div class="container">
       <div class="well text-center">
-        <p>Choose to search for a doctor by name or by your symptoms.</p>
+        <h3>Choose to search for a doctor by name or by your symptoms.</h3>
+        <hr>
         <form class="form-group">
-          <select id="search">
-            <option>Name</option>
-            <option>Symptoms</option>
-          </select>
-          <input type="text" id="term" required>
-          <button type="submit" class="btn btn-danger">Search</button>
+          <div class="row">
+            <div class="col-sm-4">
+              <select class="form-control" id="search">
+                <option>Name</option>
+                <option>Symptoms</option>
+              </select>
+            </div>
+            <div class="col-sm-8">
+              <input class="form-control" type="text" id="term" placeholder="search term" required>
+            </div>
+          </div>
+          <hr>
+          <button type="submit" class="btn btn-danger btn-lg">Search</button>
         </form>
       </div>
       <div class="well" id="answer">

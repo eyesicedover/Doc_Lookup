@@ -1,20 +1,17 @@
-html {
-  min-height: 100%;
-}
-
 body {
-  background-image: url("https://apod.nasa.gov/apod/image/1803/HH-HST-ESO-Sgendler1024.jpg");
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  min-height: 100%;
+  background-color: #7C9299;
+  color: #FC440F;
+  /* font-family: 'Source Sans Pro', sans-serif; */
 }
 
-a
-{
-target-name:new;
-target-new:tab;
+li {
+  font-size: 1.5em;
+}
+
+.jumbotron {
+  font-family: 'Bitter', serif;
+}
+
+#answer {
+  display: none;
 }

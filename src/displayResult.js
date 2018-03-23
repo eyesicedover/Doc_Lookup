@@ -5,6 +5,7 @@ export function displayResult(response) {
   } else {
     for (let i = 0; i < response.data.length; i++) {
       let prefix = response.data[i];
+      let counter = 1;
       for (let j = 0; j < prefix.practices.length; j++) {
         if (prefix.practices[j].within_search_area == true) {
           let docFirstName = prefix.profile.first_name;
@@ -18,17 +19,20 @@ export function displayResult(response) {
               phone = prefix.practices[j].phones[k].number;
             }
           }
-          $("#results").append("<li><b>Name:</b> " + docFirstName + " " + docLastName + "</li>");
+          if (counter == 1) {
+            $("#results").append("<li><b>Name:</b> " + docFirstName + " " + docLastName + "</li>");
+          }
           address = prefix.practices[j].visit_address.street + ", " + prefix.practices[j].visit_address.city + ", " + prefix.practices[j].visit_address.state + " " + prefix.practices[j].visit_address.zip;
           newPatients = prefix.practices[j].accepts_new_patients;
           website = "none";
           if (prefix.practices[j].website != null) {
             website = prefix.practices[j].website;
-            $("#results").append("<ul><li>Address: " + address + "</li><li>Website: <a href='" + website + "' target='_blank'>CLICK HERE</a></li><li>Accepting New Patients: " + newPatients + "</li><li>Phone: " + phone + "</li></ul>");
+            $("#results").append("<ul><li><u>Address " + counter + ":</u> " + address + "</li><li><u>Website:</u> <a href='" + website + "' target='_blank'>CLICK HERE</a></li><li><u>Accepting New Patients:</u> " + newPatients + "</li><li><u>Phone:</u> " + phone + "</li></ul>");
           } else {
-            $("#results").append("<ul><li>Address: " + address + "</li><li>Website: None </li><li>Accepting New Patients: " + newPatients + "</li><li>Phone: " + phone + "</li></ul>");
+            $("#results").append("<ul><li><u>Address " + counter + ":</u> " + address + "</li><li><u>Website:</u> None </li><li><u>Accepting New Patients:</u> " + newPatients + "</li><li><u>Phone:</u> " + phone + "</li></ul>");
           }
         }
+        counter++;
       }
     }
   }
